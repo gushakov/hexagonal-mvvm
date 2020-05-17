@@ -1,0 +1,44 @@
+<?page title="ZK Pagelet"?>
+<?taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.zkoss.org/2005/zul/zul.xsd">
+
+    <window border="none" viewModel="@id('vm') @init('com.github.zkhex.vm.EditStudentVm')">
+
+        <div>
+            Create new student:
+        </div>
+        <space height="5px"/>
+        <grid width="50%">
+            <columns>
+                <column hflex="1"/>
+                <column hflex="2"/>
+            </columns>
+            <rows>
+                <row>
+                    <label value="First name:"/>
+                    <textbox width="200px" value="@save(vm.newStudent.firstName)"/>
+                </row>
+                <row>
+                    <label value="Last name:"/>
+                    <textbox width="200px" value="@save(vm.newStudent.lastName)"/>
+                </row>
+            </rows>
+        </grid>
+        <space height="5px"/>
+        <div>
+            <button label="Create" onClick="@command('createStudent')"/>
+        </div>
+        <space height="5px"/>
+
+        <div visible="@load(not empty vm.newStudent.studentUuid)">
+            Last student created:
+            <label value="@load(vm.newStudent.fullName)"/>
+            UUID:
+            <label value="@load(vm.newStudent.studentUuid)"/>
+        </div>
+
+    </window>
+</zk>
