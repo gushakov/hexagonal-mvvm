@@ -3,6 +3,9 @@ Hexagonal MVVM
 
 Example of applying hexagonal or "clean" architecture principles using ZK (MVVM) framework.
 
+See [this article](https://medium.com/@gushakov/hexagonal-architecture-with-mvvm-and-zk-framework-7bb5b8291c09) 
+for detailed discussion related to this implementation.
+
 
 ### References
 
