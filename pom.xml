@@ -21,7 +21,7 @@
         <zk.version>9.0.1-Eval</zk.version>
         <zkspringboot.version>1.0.2</zkspringboot.version>
         <zkspring.version>3.0</zkspring.version>
-        <h2.version>1.4.200</h2.version>
+        <h2.version>2.1.210</h2.version>
         <orika.version>1.5.4</orika.version>
     </properties>
 
